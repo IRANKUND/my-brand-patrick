@@ -9,7 +9,7 @@ body {
 .wrapper{
      
      height: 100vh;
-     margin: 2em 5em;
+     margin: 2em  5em;
 }
 nav {
     height: 10vh;
@@ -41,6 +41,7 @@ p{
     font-size: 1.8rem;
     word-spacing: 2;
     font-family: sans-serif;
+    text-align: center;
     
     
 }
