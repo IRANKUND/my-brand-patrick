@@ -1,0 +1,127 @@
+body {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    background-image: url('/assets/bg.png'); 
+    background-position: center;
+}
+
+.wrapper{
+     
+     height: 100vh;
+     margin: 2em 5em;
+}
+nav {
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav > div{
+    flex-basis: 5em;
+    font-size: 1.3rem;
+    font-weight: 200;
+    font-family: sans-serif;
+    text-decoration: solid;
+    text-transform: capitalize;
+    color: 8E8282;
+    
+}
+nav div:first-child{
+    flex-basis: 30em;
+}
+p{
+    align-items: center;
+    margin-left: 5em;
+    margin-right: 3em;
+    margin-bottom: 1.7em;
+    color: 8E8282;
+    font-size: 1.8rem;
+    word-spacing: 2;
+    font-family: sans-serif;
+    
+    
+}
+
+.container{
+    background-color: rgb(224, 245, 243);
+    height: 59vh;
+    display: flex;
+    
+
+}
+
+.image{
+    margin-left: 2em;
+    padding-top: 2em;
+}
+.text{
+    margin-left: 8em;
+    padding-top: 7rem;
+    font-size: 2.4rem;
+    font-family: sans-serif;
+}
+/*
+.login{
+    background-color: aqua;
+    margin-left: 43em;
+    margin-top: 4em;
+    margin-right: 3em;
+    height: 67vh;
+
+    
+}
+.email{
+    margin-left: 5em;
+    padding-top: 4em;
+    
+}
+.emailin{
+    margin-left: 5em;
+}
+.pass{
+    margin-left: 5em;
+    
+}
+.passin{
+    margin-left: 5em;
+    
+} */
+.loginbox{
+    width: 320px;
+    height: 420px;
+    background-color: #000;
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50% ,-50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+}
+
+.avatar{
+
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: -50px;
+    left: calc(50% - 50px);
+}
+
+.h1{
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;
+}
+
+
+
+
+
+
+
+
