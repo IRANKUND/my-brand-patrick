@@ -7,9 +7,14 @@ body {
 }
 
 .wrapper{
-     
+     display: flex;
+     flex-wrap: wrap;
+     flex-direction: column;
      height: 100vh;
      margin: 2em  5em;
+}
+ a{
+    text-decoration: none;
 }
 nav {
     height: 10vh;
@@ -28,35 +33,50 @@ nav > div{
     color: 8E8282;
     
 }
+/*.logo{
+    width:  1vw;
+    height: 1vh;
+    top: 0;
+    left: 0;
+    padding: 15px;
+
+
+}*/
 nav div:first-child{
-    flex-basis: 30em;
+    flex-basis: 32em;
 }
 
-p{
+.bdtext p{
     align-items: center;
-    margin-left: 5em;
+    margin-left: 4em;
     margin-right: 3em;
-    margin-bottom: 1.7em;
-    color: 8E8282;
-    font-size: 1.8rem;
+    margin-bottom: 0.5em;
+    color: rgb(59, 163, 17);
+    font-size: 1.5rem;
     word-spacing: 2;
     font-family: sans-serif;
     text-align: center;
-    
-    
 }
+.bdtext h1{
+    align-items: center;
+    margin-left: 4em;
+    margin-right: 3em;
+    margin-bottom: 0.5em;
+    color: 8E8282;
+    font-size: 3rem;
+    word-spacing: 2;
+    font-family: sans-serif;
+    text-align: center;
+}
+
 
 .container{
-    background-color: rgb(224, 245, 243);
     height: 59vh;
     display: flex;
-    
-
 }
 
-.image{
-    margin-left: 2em;
-    padding-top: 2em;
+.image img{
+  border-radius: 50%;
 }
 .text{
     margin-left: 8em;
@@ -64,43 +84,28 @@ p{
     font-size: 2.4rem;
     font-family: sans-serif;
 }
-/*
-.login{
+.text a{
     background-color: aqua;
-    margin-left: 43em;
-    margin-top: 4em;
-    margin-right: 3em;
-    height: 67vh;
-
-    
-}
-.email{
-    margin-left: 5em;
-    padding-top: 4em;
-    
-}
-.emailin{
-    margin-left: 5em;
-}
-.pass{
-    margin-left: 5em;
-    
-}
-.passin{
-    margin-left: 5em;
-    
-} */
-.loginbox{
-    width: 320px;
-    height: 420px;
-    background-color: #000;
+    font-size: 50px;
     color: #fff;
-    top: 50%;
+}
+
+/*==========================================================*/
+
+.loginbox{
+    width: 30vw;
+    height: 50vh;
+    background-color: #fff;
+    color: rgb(12, 12, 12);
+    top: 40%;
     left: 50%;
     position: absolute;
     transform: translate(-50% ,-50%);
     box-sizing: border-box;
-    padding: 70px 30px;
+    padding: 1px 30px;
+    border-radius: 10px;
+    margin-top: 2%;
+    margin-bottom: 6.7%;
 }
 
 .avatar{
@@ -113,11 +118,129 @@ p{
     left: calc(50% - 50px);
 }
 
-.h1{
+.loginbox h1{
     margin: 0;
-    padding: 0 0 20px;
+    padding: 0 0 10px;
     text-align: center;
-    font-size: 22px;
+    font-size: 40px;
+}
+.loginbox p{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.loginbox input{
+    width: 100%;
+    margin-bottom: 20PX;
+}
+.loginbox input[type="text"],  input[type="password"] {
+    border: none;
+    border-bottom: 1px solid rgb(16, 110, 87);
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: rgb(9, 85, 85);
+    font-size: 20px;
+}
+.loginbox input[type="submit"]{
+    border: none;
+    outline: none;
+    height: 40px;
+    background-color: rgb(13, 148, 148);
+    color: #fff;
+    font-size: 16px;
+    border-radius: 20px;
+}
+.loginbox input[type="submit"]:hover
+{
+    cursor: pointer;
+    background-color: rgb(29, 185, 24);
+    color: #000;
+    
+}
+.loginbox a{
+    text-decoration: none;
+    line-height: 20px;
+    font-size: 20px;
+    color: rgb(30, 12, 192);
+}
+.loginbox a:hover{
+    color: rgb(20, 8, 18);
+}
+
+/*========================================*/
+
+.signinbox{
+    width: 30vw;
+    height: 85vh;
+    background-color: #fff;
+    color: rgb(12, 12, 12);
+    top: 40%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50% ,-50%);
+    box-sizing: border-box;
+    padding: 1px 30px;
+    border-radius: 10px;
+    margin-top: 2%;
+    margin-bottom: 6.7%;
+    
+}
+
+.signinbox h1{
+    margin: 0;
+    padding: 0 0 10px;
+    text-align: center;
+    font-size: 40px;
+}
+
+.signinbox p{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.signinbox input{
+    width: 100%;
+    margin-bottom: 20PX;
+}
+.signinbox input[type="text"],  input[type="password"] {
+    border: none;
+    border-bottom: 1px solid rgb(16, 110, 87);
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: rgb(10, 3, 3);
+    font-size: 20px;
+}
+.signinbox input[type="submit"]{
+    border: none;
+    outline: none;
+    height: 40px;
+    background-color: rgb(13, 148, 148);
+    color: #fff;
+    font-size: 16px;
+    border-radius: 20px;
+}
+.signinbox input[type="submit"]:hover
+{
+    cursor: pointer;
+    background-color: rgb(29, 185, 24);
+    color: #000;
+    
+}
+
+.signinbox a{
+    text-decoration: none;
+    line-height: 20px;
+    font-size: 20px;
+    color: rgb(30, 12, 192);
+}
+.signinbox a:hover{
+    color: rgb(20, 8, 18);
 }
 
 
