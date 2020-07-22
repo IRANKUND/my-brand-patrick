@@ -13,7 +13,7 @@ const navslide=()=>{
         if(link.style.animation){
             link.style.animation='';
         }else{
-            link.style.animation='navLinkfade 0.5s ease forwords ${index / 7 + 0.5}s';
+            link.style.animation='navLinksfade 0.5s ease forwords ${index / 2 + 0.5}s';
         }
         
 
