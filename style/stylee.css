@@ -3,8 +3,6 @@ body{
     font-family: 'Poppins' sans-serif;
 }
 
-
-
 a{
     text-decoration: none;
 }
@@ -178,12 +176,14 @@ a{
 }
 
 .link input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: none;
     outline: none;
     background-color: rgb(13, 148, 148);
     width: 8vw;
     height: 30px;
-    border-radius: 30px;
     color: aliceblue;
     font-size: 16px;
 }
