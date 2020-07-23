@@ -1,48 +1,57 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <title>login form</title>
-    <link rel="stylesheet" href="../style/style.css">
-</head>
-<body>
-    <nav>
-        <div class="logo"><a href="home.html"></a><img src="../assets/Logo.svg" alt="logo" /></div>
-        <ul class="nav-links">
-            <li>
-                <a href="#">home</a>
-            </li>
-            <li>
-                <a href="pages/contact.html">contact</a>
-            </li>
-            <li>
-                <a href="pages/blog.html">blog</a>
-            </li>
-            <li>
-                <a href="pages/login.html">join</a>
-            </li>
-        </ul>
-        <div class="burger">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
-        </div>
-    </nav>
-    <div class="loginbox">
-       <!----> 
-        <h1>Login Here</h1>
-        <form>
-            <p>Username</p>
-            <input type="text" name="" placeholder="enter username">
-            <p>Password</p>
-            <input type="password" name="" placeholder="enter password">
-            <input type="submit" name="" value="Login">
-            <a href="/home.html">forget your password</a><br>
-            <p>don't have account   <a href="signup.html">signup</a></p>
-        </form>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport"  content="width=divice-width initial-scale=1 shrink-to-fit=no">
+        <title>signin Page</title>
+        <link rel="stylesheet" href="/style/stylee.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://kit.fontawesome.com/yourcode.js"></script>
+    </head>
+    <body>
+        <nav>
+            <div class="logo"><a href="home.html"></a><img src="../assets/Logo.svg" alt="logo" /></div>
+            <ul class="nav-links">
+                <li>
+                    <a href="/home.html">home</a>
+                </li>
+                <li>
+                    <a href="contact.html">contact</a>
+                </li>
+                <li>
+                    <a href="blog.html">blog</a>
+                </li>
+                <li>
+                    <a href="login.html">join</a>
+                </li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
         
-</div>
+         <div class="loginbox">
+            
+            <form>
+                <div class="head"><h1>Login here</h1></div>
+                <div><p>Names</p>
+                <input type="text" name="" placeholder="enter your full name">
+            </div>
+                <div><p>password</p>
+                <input type="password" name="" placeholder="enter your password">
+            </div>
+            <div>
+                <input type="submit" name="" value="login">               
+            </div>
+            <div><p>don't have account?  <a href="signup.html">Signup here</a></p></div>
+            </form>
+
+         </div>
 <div class="footer">
     <p>&copy; Patrick 2020</p>
   </div>
+   <script src="../script/app.js"></script>
 </body>
 </html>
