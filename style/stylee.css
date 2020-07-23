@@ -207,3 +207,54 @@ a{
     color: white;
     text-align: center;
   }
+  /* contact page  ==============================*/
+
+  .contactbox {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      background-color: #eaf8f5;
+      height: 82vh;
+      width: 100%;
+      flex-basis: 4rem;
+      
+
+  }
+  .contactbox p{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    font-size: 23px;
+  }
+  .contactbox input{
+    width: 100%;
+    margin-bottom: 20PX;
+  }
+  .contactbox input[type="text"]{
+    background: transparent;
+    outline: none;
+    border: solid;
+    height: 30px;
+    color: rgb(9, 85, 85);
+    font-size: 17px;
+  }
+  .message input[type="text"]{
+    height: 90px;
+  }
+ .contactbox input[type="submit"]{
+    border: none;
+    outline: none;
+    height: 40px;
+    background-color: rgb(13, 148, 148);
+    color: #fff;
+    font-size: 16px;
+    border-radius: 20px;
+}
+.contactbox input[type="submit"]:hover
+{
+    cursor: pointer;
+    background-color: rgb(29, 185, 24);
+    color: #000;
+    
+}
