@@ -23,6 +23,7 @@ body {
 .logo img{
     height: 10vh;
     width: 10vw;
+    cursor: pointer;
 }
  nav{
      display: flex;
@@ -188,7 +189,13 @@ body {
     height: 300px;
     border: 6px solid  #ddd;
     border-radius: 50%;
+    object-fit: cover;
 }
+
+
+
+
+
 .text{
     margin-left: 1em;
     padding-top: 7rem;
@@ -384,14 +391,7 @@ body {
     margin: 20px;
     padding: 20px;
     transition: 0.3s;
-
-
-
 }
-
-
-
-
 
 
 
