@@ -239,6 +239,12 @@ a{
     color: rgb(9, 85, 85);
     font-size: 17px;
   }
+
+  .contactbox input[type="text"]:hover{
+        border-color: rgb(0, 255, 0);
+  }
+
+
   .message input[type="text"]{
     height: 90px;
   }
@@ -295,7 +301,12 @@ a{
   color: rgb(9, 85, 85);
   font-size: 17px;
 }
-
+.loginbox input[type="text"]:hover{
+    border-color: rgb(0, 255, 0);
+}
+.loginbox input[type="password"]:hover{
+    border-color: rgb(0, 255, 0);
+}
 .loginbox input[type="submit"]{
   border: none;
   outline: none;
