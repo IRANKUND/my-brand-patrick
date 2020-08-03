@@ -221,6 +221,15 @@ a{
       
 
   }
+   .alert {
+       text-align: center;
+       padding: 10px;
+       background-color: #79c879;
+       color: #ffffff;
+       margin-bottom: 10px;
+       display: none;
+   }
+
   .contactbox p{
     margin: 0;
     padding: 0;
@@ -231,14 +240,32 @@ a{
     width: 100%;
     margin-bottom: 20PX;
   }
+  .contactbox textarea{
+    
+    margin-bottom: 20PX;
+    background: transparent;
+    outline: none;
+    border: solid;
+    width: 90%;
+    height: 60px;
+    color: rgb(9, 85, 85);
+    font-size: 17px;
+    border: none;
+    border-bottom: solid;
+  }
+  .head {
+      width: 90%;
+  }
   .contactbox input[type="text"]{
     background: transparent;
     outline: none;
     border: solid;
-    width: 100%;
+    width: 90%;
     height: 30px;
     color: rgb(9, 85, 85);
     font-size: 17px;
+    border: none;
+    border-bottom: solid;
   }
 
   .contactbox input[type="text"]:hover{
@@ -252,6 +279,7 @@ a{
  .contactbox input[type="submit"]{
     border: none;
     outline: none;
+    width: 90%;
     height: 40px;
     background-color: rgb(13, 148, 148);
     color: #fff;
@@ -392,6 +420,13 @@ a{
     margin-right: 20%;
 }
 
+.image {
+    margin-top: 40px;
+}
+.image img{
+    width: 620px;
+}
+
 .formP {
     display: flex;
     justify-content: center;
@@ -401,6 +436,15 @@ a{
     margin-right: 25%;
 
 }
+
+.formP input{
+    height: 40px;
+}
+
+
+ .comm {
+    margin-top: 30px;
+ }
 
 .formP h1{
     margin-left: 6%;
