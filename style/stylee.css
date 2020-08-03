@@ -175,7 +175,10 @@ a{
   margin-top: 0px;
 }
 
-.link input{
+.btn a{
+    color: #fff;
+}
+.btn {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -187,10 +190,8 @@ a{
     color: aliceblue;
     font-size: 16px;
 }
-.link input:hover{
-    cursor: pointer;
-    background-color: rgb(29, 185, 24);
-    color: #000;
+.btn a:hover{
+    color: khaki;
 }
 
 .footer {
