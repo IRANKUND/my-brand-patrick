@@ -71,14 +71,6 @@ function saveMessage(name, email, phone, message){
     
 }
 
-
-
-
-
-
-
-
-
 // function saveMessage(name, email, phone, message){
 //     var newMessagesRef= messagesRef.push();
 //     newMessagesRef.set({

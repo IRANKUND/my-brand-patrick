@@ -356,6 +356,10 @@ a{
     border-color: rgb(0, 255, 0);
 }
 
+.contactbox textarea:hover{
+    border-color: rgb(0, 255, 0);
+}
+
 .contactbox input[type="submit"]{
   border: none;
   outline: none;
