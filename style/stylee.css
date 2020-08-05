@@ -175,7 +175,10 @@ a{
   margin-top: 0px;
 }
 
-.link input{
+.btn a{
+    color: #fff;
+}
+.btn {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -187,10 +190,8 @@ a{
     color: aliceblue;
     font-size: 16px;
 }
-.link input:hover{
-    cursor: pointer;
-    background-color: rgb(29, 185, 24);
-    color: #000;
+.btn a:hover{
+    color: khaki;
 }
 
 .footer {
@@ -207,7 +208,7 @@ a{
     color: white;
     text-align: center;
   }
-  /* contact page  ==============================*/
+  /* contact page  ==============================
 
   .contactbox {
       display: flex;
@@ -292,7 +293,92 @@ a{
     background-color: rgb(29, 185, 24);
     color: #000;
     
+}*/
+
+.contactbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #eaf8f5;
+    height: 78vh;
+    width: 100%;
+    flex-basis: 4rem;
+    bottom: 0;
+    
+
 }
+.alert {
+    text-align: center;
+    padding: 10px;
+    background-color: #79c879;
+    color: #ffffff;
+    margin-bottom: 10px;
+    display: none;
+}
+
+.contactbox p{
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  font-size: 20px;
+}
+.contactbox input{
+  width: 100%;
+  margin-bottom: 20PX;
+}
+.contactbox input[type="text"]{
+  background: transparent;
+  outline: none;
+  border: none;
+  border-bottom: solid;
+  width: 100%;
+  height: 30px;
+  color: rgb(9, 85, 85);
+  font-size: 17px;
+}
+.contactbox textarea{
+    width: 100%;
+    margin-bottom: 20PX;
+  }
+  .contactbox textarea{
+    background: transparent;
+    outline: none;
+    border: none;
+    border-bottom: solid;
+    width: 100%;
+    height: 50px;
+    color: rgb(9, 85, 85);
+    font-size: 17px;
+  }
+
+.contactbox input[type="text"]:hover{
+    border-color: rgb(0, 255, 0);
+}
+
+.contactbox textarea:hover{
+    border-color: rgb(0, 255, 0);
+}
+
+.contactbox input[type="submit"]{
+  border: none;
+  outline: none;
+  height: 40px;
+  background-color: rgb(13, 148, 148);
+  color: #fff;
+  font-size: 16px;
+  border-radius: 20px;
+}
+.contactbox input[type="submit"]:hover
+{
+  cursor: pointer;
+  background-color: rgb(29, 185, 24);
+  color: #000;
+  
+}
+
+
+
 
 
 /*login ===============================================*/
