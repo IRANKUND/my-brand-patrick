@@ -1,0 +1,22 @@
+
+
+nav{
+    height: 60px;
+}
+.admin-wrapper{
+    display: flex;
+    border: 1px solid red;
+    height: 530px;
+   
+}
+.admin-wrapper .left-sidebar{
+     flex: 2;
+     height:100%;
+     background-color: #eaf8f5;
+    
+}
+.admin-wrapper .admin-content{
+    flex: 8;
+    height:100%;
+
+}

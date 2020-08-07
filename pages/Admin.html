@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport"  content="width=divice-width initial-scale=1 shrink-to-fit=no">
+        <title>contact Page</title>
+        <link rel="stylesheet" href="/style/stylee.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <nav>
+            <div class="logo"><a href="home.html"></a><img src="../assets/Logo.svg" alt="logo" /></div>
+            <ul class="nav-links">
+                <li>
+                    <a href="login.html">logout</a>
+                </li>
+            </ul>
+        </nav>
+        <button class="open-button" onclick="openForm()">Create</button>
+
+<div class="form-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+    <h1>create blog</h1>
+
+    <label for="email"><b>Title</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+    <label for="psw"><b>Athor</b></label>
+    <input type="text" placeholder="Enter Password" name="psw" required>
+    <label for="email"><b>Introduction</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+    <label for="email"><b>content</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+    <button type="submit" class="btn">submit</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+
+<script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
+
+
+        <table>
+            <tr>
+              <th>Author</th>
+              <th>Title</th>
+              <th>Content</th>
+              <th>Action</th>
+              <th>Action</th>
+
+            </tr>
+            <tr>
+              <td>Alfreds Futterkiste</td>
+              <td>Maria Anders</td>
+              <td>Germany</td>
+              <td>Edit</td>
+              <td>Delete</td>
+            </tr>
+            <tr>
+              <td>Centro comercial Moctezuma</td>
+              <td>Francisco Chang</td>
+              <td>Mexico</td>
+              <td>Edit</td>
+              <td>Delete</td>
+            </tr>
+            <tr>
+              <td>Ernst Handel</td>
+              <td>Roland Mendel</td>
+              <td>Austria</td>
+              <td>Edit</td>
+              <td>Delete</td>
+            </tr>
+            <tr>
+              <td>Island Trading</td>
+              <td>Helen Bennett</td>
+              <td>UK</td>
+              <td>Edit</td>
+              <td>Delete</td>
+            </tr>
+            <tr>
+              <td>Laughing Bacchus Winecellars</td>
+              <td>Yoshi Tannamuri</td>
+              <td>Canada</td>
+              <td>Edit</td>
+              <td>Delete</td>
+            </tr>
+            <tr>
+              <td>Magazzini Alimentari Riuniti</td>
+              <td>Giovanni Rovelli</td>
+              <td>Italy</td>
+              <td>Edit</td>
+              <td>Delete</td>
+            </tr>
+          </table>
+        
+        
+<div class="footer">
+    <p>&copy; Patrick 2020</p>
+  </div>
+   <script src="../script/app.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
+   <script src="../script/firebase.js"></script>
+   <script src="../script/main.js"></script>
+   <script src="../script/promises.js"></script>
+</body>
+</html>

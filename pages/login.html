@@ -34,13 +34,13 @@
         
          <div class="loginbox">
             
-            <form>
+            <form id="loginForm">
                 <div class="head"><h1>Login here</h1></div>
-                <div><p>Names</p>
-                <input type="text" name="" placeholder="enter your full name">
+                <div><p>Email</p>
+                <input type="email" name="" id="email" placeholder="enter your full name">
             </div>
                 <div><p>Password</p>
-                <input type="password" name="" placeholder="enter your password">
+                <input type="password" name="" id="password" placeholder="enter your password">
             </div>
             <div>
                 <input type="submit" name="" value="login">               
@@ -53,5 +53,10 @@
     <p>&copy; Patrick 2020</p>
   </div>
    <script src="../script/app.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
+   <script src="../script/firebase.js"></script>
+   <script src="../script/login.js"></script>
 </body>
 </html>
