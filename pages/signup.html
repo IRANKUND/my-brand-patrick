@@ -34,17 +34,17 @@
         
          <div class="signinbox">
             
-            <form>
+            <form id="signupForm">
                 <div class="head"><h1>Register here</h1></div>
                 <div>
                     <p>Name</p>
-                    <input type="text" name="" placeholder="enter your full name"></div>
+                    <input type="text" name="" id="name" placeholder="enter your full name"></div>
                     <div><p>Email</p>
-                    <input type="text" name="" placeholder="enter your email"></div>
+                    <input type="email" name="" id="email" placeholder="enter your email"></div>
                     <div><p>Phone Number</p>
-                    <input type="text" name="" placeholder="enter your Phone"></div>
+                    <input type="text" name="" id="phone" placeholder="enter your Phone"></div>
                     <div><p>Password</p>
-                    <input type="password" name="" placeholder="enter password"></div>
+                    <input type="password" name="" id="password" placeholder="enter password"></div>
                     <div><input type="submit" name="" value="submit"></div>
                     <div><p>already have account?  <a href="login.html">login</a></p></div>
             </form>
@@ -54,5 +54,10 @@
     <p>&copy; Patrick 2020</p>
   </div>
    <script src="../script/app.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
+   <script src="../script/firebase.js"></script>
+   <script src="../script/auth.js"></script>
 </body>
 </html>
