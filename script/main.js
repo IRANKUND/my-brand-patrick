@@ -3,7 +3,7 @@
  
 
 // reference messages collection
-  var messagesRef = firebase.firestore();
+var messagesRef = firebase.firestore();
  
 // listern for form
 
@@ -59,12 +59,3 @@ function saveMessage(name, email, phone, message){
     
 }
 
-// function saveMessage(name, email, phone, message){
-//     var newMessagesRef= messagesRef.push();
-//     newMessagesRef.set({
-//      name: name,
-//      email: email,
-//      phone: phone,
-//      message: message
-//     });
-// }
