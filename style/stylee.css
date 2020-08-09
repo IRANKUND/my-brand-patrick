@@ -280,7 +280,7 @@ a{
   border: none;
   outline: none;
   height: 40px;
-  background-color: rgb(13, 148, 148);
+  background-color:;
   color: #fff;
   font-size: 16px;
   border-radius: 20px;
@@ -453,7 +453,7 @@ a{
     margin-right: 20%;
     margin-bottom: 2%;
 }
-/* admin table===================================*/
+/* admin table===================================
 table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
@@ -469,7 +469,7 @@ table {
   
   tr:nth-child(even) {
     background-color: #dddddd;
-  }
+  }*/
 
   body {font-family: Arial, Helvetica, sans-serif;}
   * {box-sizing: border-box;}

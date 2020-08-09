@@ -20,53 +20,34 @@
         <div class="admin-wrapper">
            <div class="left-sidebar">
                <ul>
-                   <li> <a href="manager.html">Manage Posts</a> </li>
+                   <li> <a href="manager.html">Manage blog</a> </li>
                    <li> <a href="viewUser.html">Manage Users</a> </li>
                    <li> <a href="viewMessage.html">View Massages</a> </li>
                </ul>
 
            </div>
            <div class="admin-content">
-               <div class="button-group">
-                   <a href="create.html" class="button">Add Blog</a>
-               </div>
                <div class="content">
-                   <h2 class="page-title">Manage Posts</h2>
-                   <table>
-                       <thead>
-                           <th>Title</th>
-                           <th>Author</th>
-                           <th colspan="2">Action</th>
-                       </thead>
-                       <tbody>
-                           <tr>
-                               <td>Fisrt blog post</td>
-                               <td>Patrick</td>
-                               <td> <a href="#" class="edit">edit</a> </td>
-                               <td ><button>delete</button></td>
-
-                           </tr>
-                           <tr>
-                            <td>Second blog post</td>
-                            <td>Irankunda</td>
-                            <td> <a href="#" class="edit">edit</a> </td>
-                            <td ><button>delete</button></td>
-
-                            </tr>
-                           
-                             
-                       </tbody>
-                   </table>
+                   <h2 class="page-title">Create a blog</h2>
+                  <form class="blog-form">
+                      <label for="">Title</label>
+                      <input type="text" id="blog-title" placeholder="enter titl of a blog">
+                      <label for="">Author</label>
+                      <input type="text" id="author-name" placeholder="enter name of author">
+                      <label for="">Content</label>
+                      <textarea name="" id="blog-content" cols="30" rows="8" placeholder="blog content here"></textarea>
+                      <input type="submit" value="Create">
+                  </form>
 
                </div>
            </div>
         </div>
-
+        <div class="footer">
+            <p>&copy; Patrick 2020</p>
+          </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        
         <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
         <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
         <script src="../script/firebase.js"></script>
-        
         </body>
         </html>

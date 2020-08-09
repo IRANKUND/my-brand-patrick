@@ -12,7 +12,7 @@ function login(e){
 
 firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
-        location.replace("../pages/blog.html")
+        location.replace("../pages/manager.html")
     } else {
         alert(" no user signed in ");
     }
