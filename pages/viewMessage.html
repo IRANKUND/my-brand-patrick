@@ -8,12 +8,12 @@
         <link rel="stylesheet" href="/style/admin.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
-    <body>
+    <body onload="readMessage()">
         <nav>
             <div class="logo"><a href="home.html"></a><img src="../assets/Logo.svg" alt="logo" /></div>
             <ul class="nav-links">
                 <li>
-                    <a href="login.html">logout</a>
+                    <a href="login.html" onclick="logOut()">logout</a>
                 </li>
             </ul>
         </nav>
@@ -26,34 +26,17 @@
                </ul>
 
            </div>
-           <div class="admin-content">
+           <div class="admin-content" id="table-section">
                
                <div class="content">
                    <h2 class="page-title">Manage Message</h2>
                    <table>
                        <thead>
                            <th>Sender Names</th>
-                           <th>Sender Email</th>
+                           <th>Sender Phone</th>
                            <th colspan="2">Action</th>
                        </thead>
-                       <tbody>
-                           <tr>
-                               <td>Irankunda Patrick</td>
-                               <td>admin</td>
-                               
-                               <td ><button>delete</button></td>
-
-                           </tr>
-                           <tr>
-                            <td>Ishimwe maxime</td>
-                            <td>Ordinary</td>
-                            
-                            <td ><button>delete</button></td>
-
-                            </tr>
-                           
-                             
-                       </tbody>
+                       
                    </table>
 
                </div>
@@ -62,9 +45,10 @@
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         
-        <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase.js"></script>
         <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
         <script src="../script/firebase.js"></script>
-        
+        <script src="../script/meassage.js"></script>
+        <script src="../script/login.js"></script>
         </body>
         </html>

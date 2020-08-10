@@ -1,5 +1,5 @@
 
-const auth=firebase.auth();
+
 
 // listern for form
 

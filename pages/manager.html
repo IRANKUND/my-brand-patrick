@@ -2,18 +2,18 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <meta name="viewport"  content="width=divice-width initial-scale=1 shrink-to-fit=no">
+        <!-- <meta name="viewport"  content="width=divice-width initial-scale=1 shrink-to-fit=no"> -->
         <title>contact Page</title>
         <link rel="stylesheet" href="/style/stylee.css">
         <link rel="stylesheet" href="/style/admin.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
-    <body>
+    <body onload="readBlog()">
         <nav>
             <div class="logo"><a href="home.html"></a><img src="../assets/Logo.svg" alt="logo" /></div>
             <ul class="nav-links">
                 <li>
-                    <a href="login.html">logout</a>
+                    <a  href="#"  onclick="logOut()" >logout</a>
                 </li>
             </ul>
         </nav>
@@ -30,7 +30,7 @@
                <div class="button-group">
                    <a href="create.html" class="button">Add Blog</a>
                </div>
-               <div class="content">
+               <div class="content" id="table-section">
                    <h2 class="page-title">Manage Posts</h2>
                    <table>
                        <thead>
@@ -38,35 +38,23 @@
                            <th>Author</th>
                            <th colspan="2">Action</th>
                        </thead>
-                       <tbody>
-                           <tr>
-                               <td>Fisrt blog post</td>
-                               <td>Patrick</td>
-                               <td> <a href="#" class="edit">edit</a> </td>
-                               <td ><button>delete</button></td>
-
-                           </tr>
-                           <tr>
-                            <td>Second blog post</td>
-                            <td>Irankunda</td>
-                            <td> <a href="#" class="edit">edit</a> </td>
-                            <td ><button>delete</button></td>
-
-                            </tr>
-                           
-                             
-                       </tbody>
+                       
                    </table>
 
                </div>
+               <div  class="content"  id="form-section">
+               
+            </div>
+
            </div>
         </div>
-
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        
-        <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase.js"></script>
         <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
         <script src="../script/firebase.js"></script>
+        <script src="../script/login.js"></script>
+        <script src="../script/createblog.js"></script>
+        
         
         </body>
         </html>

@@ -13,7 +13,7 @@
             <div class="logo"><a href="home.html"></a><img src="../assets/Logo.svg" alt="logo" /></div>
             <ul class="nav-links">
                 <li>
-                    <a href="login.html">logout</a>
+                    <a href="login.html" onclick="logOut()" >logout</a>
                 </li>
             </ul>
         </nav>
@@ -29,25 +29,28 @@
            <div class="admin-content">
                <div class="content">
                    <h2 class="page-title">Create a blog</h2>
-                  <form class="blog-form">
+                  <form class="blog-form" id="form">
                       <label for="">Title</label>
-                      <input type="text" id="blog-title" placeholder="enter titl of a blog">
+                      <input type="text" id="title" placeholder="enter titl of a blog" required>
                       <label for="">Author</label>
-                      <input type="text" id="author-name" placeholder="enter name of author">
+                      <input type="text" id="name" placeholder="enter name of author" required>
                       <label for="">Content</label>
-                      <textarea name="" id="blog-content" cols="30" rows="8" placeholder="blog content here"></textarea>
+                      <textarea name="" id="content" cols="30" rows="8" placeholder="blog content here" required></textarea>
                       <input type="submit" value="Create">
                   </form>
-
                </div>
+               
            </div>
         </div>
         <div class="footer">
             <p>&copy; Patrick 2020</p>
           </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase.js"></script>
         <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
         <script src="../script/firebase.js"></script>
+        <script src="../script/login.js"></script>
+        <script src="../script/createblog.js"></script>
+        
         </body>
         </html>
