@@ -8,7 +8,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Poppins" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
-    <body>
+    <body onload="loadBlog()">
         <nav>
             <div class="logo"><a href="home.html"></a><img src="../assets/Logo.svg" alt="logo" /></div>
             <ul class="nav-links">
@@ -36,56 +36,13 @@
         <div class="box-area">
             <div class="single-box">
                 <div class="img-area">
-                    <div class="img-text">
-                        <img src="../assets/js.png" alt="">
-                        <span class="header-text"><strong>Understand JavaScript</strong></span>
-                        <p>JavaScript, often abbreviated as JS, is a programming language that conforms to
-                             the ECMAScript specification. JavaScript is high-level, often just-in-time compiled, and multi-paradigm. 
-                            </p>
-                            <div class="link">
-                             <div class="btn"><a href="#">learn more</a></div>
-                             <div><i style="font-size:24px" class="fa">&#xf06e;</i>3</div>
-                             <div><i style="font-size:24px" class="fa">&#xf0e6;</i>2</div>
-                             <p>by Patrick</p> 
-                             
-                             </div>
+                    <div class="img-text" id="image-text" >
+                        <!-- <img src="../assets/js.png" alt=""> -->
+                        
                     </div>
                 </div>
             </div>
-            <div class="single-box">
-             <div class="img-area">
-                 <div class="img-text">
-                     <img src="../assets/html.png" alt="">
-                     <span class="header-text"><strong>Understand Html</strong></span>
-                     <p>Hypertext Markup Language is the standard markup language for documents designed to be displayed in a
-                          web browser. It can be assisted by technologies such as css and js 
-                         </p>
-                         <div class="link">
-                            <div class="btn"><a href="blogPost.html">learn more</a></div>
-                             <div><i style="font-size:24px" class="fa">&#xf087;</i>3</div>
-                             <div><i style="font-size:24px" class="fa">&#xf0e6;</i>2</div>
-                             <p>by Patrick</p> 
-                             </div>
-                 </div>
-             </div>
-         </div>
-         <div class="single-box">
-             <div class="img-area">
-                 <div class="img-text">
-                     <img src="../assets/urugamba.png" alt="">
-                     <span class="header-text"><strong>Understand css</strong></span>
-                     <p>Cascading Style Sheets is a style sheet language used for describing the presentation of a 
-                         document written in a markup language like HTML. CSS is a cornerstone technology of the World
-                     </p>
-                     <div class="link">
-                     <div class="btn"><a href="#">learn more</a></div>
-                     <div><i style="font-size:24px" class="fa">&#xf06e;</i>3</div>
-                     <div><i style="font-size:24px" class="fa">&#xf0e6;</i>2</div>
-                     <p>by Patrick</p> 
-                     </div>
-                 </div>
-             </div>
-         </div>
+            
         </div>
         
 
@@ -94,5 +51,10 @@
         <p>&copy; Patrick 2020</p>
       </div>
        <script src="../script/app.js"></script>
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
+        <script src="../script/firebase.js"></script>
+        <script src="../script/meassage.js"></script>
     </body>
     </html>

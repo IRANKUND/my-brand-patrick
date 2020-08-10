@@ -16,7 +16,9 @@ document.getElementById('form').addEventListener('submit', (e)=>{
      }
      let db=firebase.firestore().collection('blogs/');
      db.add(blog).then(()=>{
+        
          alert('saved')
+         document.getElementById('table-section').innerHTML +='';
      })
  }
 
@@ -43,10 +45,10 @@ document.getElementById('form').addEventListener('submit', (e)=>{
 
  function deleteBlog(id){
        firebase.firestore().collection('blogs').doc(id).delete().then(() =>{
-           alert("deleted");
+         
        })
-       document.getElementById('table-section').innerHTML +='';
-       readBlog();
+      
+       
  }
 
 function updateBlog(id,title,name,content){
@@ -54,11 +56,11 @@ function updateBlog(id,title,name,content){
     <h2 class="page-title">Create a blog</h2>
     <form  class="blog-form" id="form2">
         <label for="">Title</label>
-        <input type="text" id="title" placeholder="enter titl of a blog">
+        <input type="text" id="title" placeholder="enter titl of a blog" required>
         <label for="">Author</label>
-        <input type="text" id="name" placeholder="enter name of author">
+        <input type="text" id="name" placeholder="enter name of author" required>
         <label for="">Content</label>
-        <textarea name="" id="content" cols="30" rows="8" placeholder="blog content here"></textarea>
+        <textarea name="" id="content" cols="30" rows="8" placeholder="blog content here" required></textarea>
         <input type="submit" value="Create" >
     </form>
     

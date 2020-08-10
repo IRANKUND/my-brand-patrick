@@ -17,3 +17,8 @@ firebase.auth().onAuthStateChanged(function(user) {
         alert(" no user signed in ");
     }
   });
+
+  function logOut(){
+    firebase.auth().signOut();
+  }
+  
