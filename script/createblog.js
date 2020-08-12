@@ -23,18 +23,19 @@ document.getElementById('form').addEventListener('submit', (e)=>{
  }
 
  function readBlog(){
+    
     firebase.firestore().collection('blogs').onSnapshot(function(snapshot){
         document.getElementById('table-section').innerHTML +='';
         snapshot.forEach(blogValue => {
             document.getElementById('table-section').innerHTML+=`
                       <table> 
-                       <tbody>
+                       <tbody style="text-align: center; background-color: #7dd3c0;">
                            
                                <td>${blogValue.data().title}</td>
                                <td>${blogValue.data().name}</td>
                                <td> <a href="#" style="color: blue;" class="edit" onclick="updateBlog('${blogValue.id}','${blogValue.data().title}',
-                               '${blogValue.data().name}','${blogValue.data().content}')">edit</a> </td>
-                               <td> <a href="#" style="color: red;" class="delete" onclick="deleteBlog('${blogValue.id}')">delete</a> </td>
+                               '${blogValue.data().name}','${blogValue.data().content}')">edit</a> || 
+                                <a href="#" style="color: red;" class="delete" onclick="deleteBlog('${blogValue.id}')">delete</a> </td>
                         </tr>
                         </tbody>
                         </table>
@@ -43,6 +44,26 @@ document.getElementById('form').addEventListener('submit', (e)=>{
     });
  }
 
+ function readUser(){
+    firebase.firestore().collection('user').onSnapshot(function(snapshot){
+        document.getElementById('table-section').innerHTML +='';
+        snapshot.forEach(blogValue => {
+            document.getElementById('table-section').innerHTML+=`
+                      <table> 
+                       <tbody style="text-align: center; background-color: #7dd3c0;">
+                               <td>${blogValue.data().name}</td>
+                               <td>${blogValue.data().phone}</td>
+                               <td>${blogValue.data().role}</td>
+                            <td><a href="#" style="color: red;" class="delete" onclick="deleteUser('${blogValue.id}')">delete</a> </td>
+                        </tr>
+                        </tbody>
+                        </table>
+            `
+        });
+    });
+ }
+
+
  function deleteBlog(id){
        firebase.firestore().collection('blogs').doc(id).delete().then(() =>{
          
@@ -50,6 +71,13 @@ document.getElementById('form').addEventListener('submit', (e)=>{
       
        
  }
+ function deleteUser(id){
+    firebase.firestore().collection('user').doc(id).delete().then(() =>{
+      
+    })
+   
+    
+}
 
 function updateBlog(id,title,name,content){
     document.getElementById('table-section').innerHTML=`

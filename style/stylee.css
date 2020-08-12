@@ -146,6 +146,10 @@ a{
     padding: 20px;
     transition: 0.3s;
 }
+.image-text {
+  border: 1px solid #0000 ;
+}
+
 .img-text img{
     width: 300px;
     height: 123px;
@@ -163,9 +167,15 @@ a{
     line-height: 48px;
 }
 
-.single-box:hover{
-    background-color: deeppink;
+.single{
+  border: 1px solid #000;
+  margin-bottom: 20px;
+}
+
+.single:hover{
+    background-color: rgb(125, 141, 140);
     color: aliceblue;
+    
 }
 .link{
   display: flex;
@@ -377,13 +387,27 @@ a{
   width: 100%;
   margin-bottom: 20PX;
 }
+.signinbox select{
+  width: 100%;
+  margin-bottom: 20PX;
+}
 .signinbox input[type="text"], input[type="password"], input[type="email"]{
   background: transparent;
   outline: none;
   border: none;
   border-bottom: solid;
   width: 100%;
-  height: 30px;
+  height: 25px;
+  color: rgb(9, 85, 85);
+  font-size: 17px;
+}
+.signinbox select {
+  background: transparent;
+  outline: none;
+  border: none;
+  border-bottom: solid;
+  width: 100%;
+  height: 25px;
   color: rgb(9, 85, 85);
   font-size: 17px;
 }
@@ -391,7 +415,7 @@ a{
 .signinbox input[type="submit"]{
   border: none;
   outline: none;
-  height: 40px;
+  height: 30px;
   background-color: rgb(13, 148, 148);
   color: #fff;
   font-size: 16px;

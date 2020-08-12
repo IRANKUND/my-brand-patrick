@@ -4,7 +4,7 @@ function readMessage(){
         snapshot.forEach(contactValue => {
             document.getElementById('table-section').innerHTML+=`
                       <table> 
-                       <tbody>
+                       <tbody style="text-align: center; background-color: #7dd3c0;">
                        <tr>
                                <td>${contactValue.data().name}</td>
                                <td>${contactValue.data().phone}</td>
@@ -30,15 +30,34 @@ function loadBlog(){
         document.getElementById('image-text').innerHTML+='';
         snapshot.forEach(blogValue => {
             document.getElementById('image-text').innerHTML+=`
+            <div class="single">
             <span class="header-text"><strong>${blogValue.data().title}</strong></span>
             <p>${blogValue.data().content}</p>
                 <div class="link">
-                <div class="btn"><a href="blogPost.html">learn more</a></div>
+                <div class="btn"><a href="blogPost.html" onclick="getBlog('${blogValue.id}')">learn more</a></div>
                  <div><i style="font-size:24px" class="fa">&#xf06e;</i>3</div>
                  <div><i style="font-size:24px" class="fa">&#xf0e6;</i>2</div>
                  <p>${blogValue.data().name}</p>
-                 </div>       
+                 </div> 
+                 </div>      
             `
         });
     });
  }
+
+
+
+ function getBlog(id, name){
+     console.log(id + name)
+   firebase.firestore().collection('blogs').doc(id).get().then(function(docref){
+    document.getElementById('postContent').innerHTML+=`
+    <span class="header-text"><strong>${docref.data().title}</strong></span>
+    `;
+       console.log(docref.data().title)
+       
+   })
+   
+   
+ }
+
+
