@@ -1,4 +1,4 @@
-
+const db=firebase.firestore();
 
 document.getElementById('loginForm').addEventListener('submit', login);
 function login(e){
@@ -12,7 +12,14 @@ function login(e){
 
 firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
-        location.replace("../pages/manager.html")
+     db.collection('user').doc(user.uid).get().then((doc) =>{
+      
+      if(doc.data().role === "admin"){
+      location.replace("../pages/manager.html");
+    }else{
+      location.replace("../pages/blog.html");
+    }
+     })
     } else {
         alert(" no user signed in ");
     }

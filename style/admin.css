@@ -55,15 +55,16 @@ nav{
       margin-bottom: 1.5rem;
   }
 
-  table{
+   table {
       width: 100%;
       border-collapse: collapse;
       font-size: 1.1rem;
   }
 
-  th, td{
-      text-align: left;
-      border-bottom: 1px solid #7dd3c0;
+  table th, table td{
+    border: 1px solid red;
+    padding: 8px;
+    width: 30%;
   }
   .blog-form  {
       display: flex;

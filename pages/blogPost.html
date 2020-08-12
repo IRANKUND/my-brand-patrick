@@ -6,7 +6,7 @@
     <title>Blog Post</title>
     <link rel="stylesheet" href="../style/stylee.css">
 </head>
-<body>
+<body onload="getBlog()"> 
     <nav>
         <div class="logo"><a href="home.html"></a><img src="../assets/Logo.svg" alt="logo" /></div>
         <ul class="nav-links">
@@ -16,11 +16,9 @@
             <li>
                 <a href="contact.html">contact</a>
             </li>
+           
             <li>
-                <a href="blog.html">blog</a>
-            </li>
-            <li>
-                <a href="login.html">join</a>
+                <a href="login.html">blog</a>
             </li>
         </ul>
         <div class="burger">
@@ -29,8 +27,11 @@
             <div class="line3"></div>
         </div>
     </nav>
-    <div class="postContainer">
-        <div class="image"><img src="../assets/html.png" alt=""></div>
+    <div class="postContainer" id="postContent">
+        <div class="image"><img src="../assets/html.png" alt="">
+            <div><h2>Understand html</h2></div> 
+        </div>
+        
         <p>HTML (HyperText Markup Language) is the most basic building block of the Web.
              It defines the meaning and structure of web content. Other technologies besides HTML 
              are generally used to describea web page's appearance/presentation
@@ -50,21 +51,36 @@
                  <h1>leave your comment here</h1>
         <form class="formP">
             
-            <p>Names
-            <input type="text" name="" placeholder="your name" required></p>
-            <p>Email
-            <input type="text" name="" placeholder="your Email" required></p>
-            <div class="comm"><p>Comment
-            <textarea name="" id="" cols="20" rows="4" placeholder="comment" required></textarea>
-             </p>
-            <input type="submit" value="comment">
-            </div>
-        </form><br>
-        <h1>Recent comments</h1>
+            <div>
+                <form class="formP">
+                  <label for="fname">Names</label>
+                  <input type="text" id="name" name="firstname" placeholder="Your name..">
+              
+                  <label for="lname">Email</label>
+                  <input type="text" id="email" name="lastname" placeholder="Your email..">
+              
+                  <label for="country">comment</label>
+                   <textarea name="" id="" cols="70" rows="10" placeholder="Your comment.."></textarea>
+                  <input type="submit" value="Submit">
+                </form>
+              </div>
+              <div style="margin-bottom: 60px; text-align: center;">
+                <h1>Recent comments</h1>
+                <h3>Patrick</h3>
+                <p>the blog was interesting</p>
+                <h3>irankunda</h3>
+                <p>html is good</p>
+              </div>
+
+        
     </div>
         <div class="footer">
         <p>&copy; Patrick 2020</p>
       </div>
        <script src="../script/app.js"></script>
+       <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
+        <script src="../script/firebase.js"></script>
+        <script src="../script/meassage.js"></script>
 </body>
 </html>

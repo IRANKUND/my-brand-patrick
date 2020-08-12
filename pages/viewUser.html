@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="/style/admin.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
-    <body>
+    <body onload="readUser()">
         <nav>
             <div class="logo"><a href="home.html"></a><img src="../assets/Logo.svg" alt="logo" /></div>
             <ul class="nav-links">
@@ -20,40 +20,24 @@
         <div class="admin-wrapper">
            <div class="left-sidebar">
                <ul>
-                   <li> <a href="manager.html">Manage Posts</a> </li>
+                   <li> <a href="manager.html">Manage Blogs</a> </li>
                    <li> <a href="viewUser.html">Manage Users</a> </li>
-                   <li> <a href="viewMessage.html">View Massages</a> </li>
+                   <li> <a href="viewMessage.html">View Messages</a> </li>
                </ul>
 
            </div>
            <div class="admin-content">
                
-               <div class="content">
+               <div class="content" id="table-section">
                    <h2 class="page-title">Manage Users</h2>
                    <table>
-                       <thead>
+                       <thead style="background-color: aqua;">
                            <th>Names</th>
-                           <th>Email</th>
-                           <th colspan="2">Action</th>
+                           <th>Phone</th>
+                           <th>role</th>
+                           <th>Action</th>
                        </thead>
-                       <tbody>
-                           <tr>
-                               <td>Fisrt blog post</td>
-                               <td>Patrick</td>
-                               <td> <a href="#" class="edit">edit</a> </td>
-                               <td ><button>delete</button></td>
-
-                           </tr>
-                           <tr>
-                            <td>Second blog post</td>
-                            <td>Irankunda</td>
-                            <td> <a href="#" class="edit">edit</a> </td>
-                            <td ><button>delete</button></td>
-
-                            </tr>
-                           
-                             
-                       </tbody>
+                    
                    </table>
 
                </div>
@@ -65,6 +49,7 @@
         <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
         <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
         <script src="../script/firebase.js"></script>
-        
+        <script src="../script/createblog.js"></script>
+        <script src="../script/login.js"></script>
         </body>
         </html>

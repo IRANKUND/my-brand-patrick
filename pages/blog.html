@@ -19,10 +19,7 @@
                     <a href="contact.html">contact</a>
                 </li>
                 <li>
-                    <a href="blog.html">blog</a>
-                </li>
-                <li>
-                    <a href="login.html">join</a>
+                    <a href="login.html" onclick="logOut()">logout</a>
                 </li>
             </ul>
             <div class="burger">
@@ -33,7 +30,7 @@
         </nav>
         
         <div class="heading"><h1>Recent Blogs if you are interested you can comment on a blog</h1></div>
-        <div class="box-area">
+        <div class="box-area" id="box-area">
             <div class="single-box">
                 <div class="img-area">
                     <div class="img-text" id="image-text" >
@@ -56,5 +53,6 @@
         <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
         <script src="../script/firebase.js"></script>
         <script src="../script/meassage.js"></script>
+        <script src="../script/login.js"></script>
     </body>
     </html>
