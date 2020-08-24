@@ -19,6 +19,7 @@ document.getElementById('form').addEventListener('submit', (e)=>{
         
          alert('saved')
          document.getElementById('table-section').innerHTML +='';
+         window.location.reload();
      })
  }
 
