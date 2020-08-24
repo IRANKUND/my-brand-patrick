@@ -12,14 +12,13 @@ function signup(e){
     var password=document.getElementById('password').value;
     var name=document.getElementById('name').value;
     var phone=document.getElementById('phone').value;
-    var role=document.getElementById('role').value;
     const promise=firebase.auth().createUserWithEmailAndPassword(
       email, password).then((user) =>{
         console.log(user);
         db.collection('user').doc(user.user.uid).set({
           name: name,
           phone: phone,
-          role: role
+          role: 'user'
         });
         
       }) 

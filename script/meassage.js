@@ -25,6 +25,15 @@ function readMessage(){
     
 }
 
+let param, postid, docRef, doc;
+const init = async () => {
+	param = window.location.search.split('=');
+	postid = param[1].split('&')[0];
+	docRef = await db.collection('blogs').doc(postid).get();
+	doc = docRef.data();
+	
+};
+
 function loadBlog(){
     firebase.firestore().collection('blogs').onSnapshot(function(snapshot){
         document.getElementById('image-text').innerHTML+='';
@@ -34,7 +43,7 @@ function loadBlog(){
             <span class="header-text"><strong>${blogValue.data().title}</strong></span>
             <p>${blogValue.data().content}</p>
                 <div class="link">
-                <div class="btn"><a href="blogPost.html" onclick="getBlog('${blogValue.id}')">learn more</a></div>
+                <div class="btn"><a href="#" onclick="getBlog('${blogValue.id}')">learn more</a></div>
                  <div><i style="font-size:24px" class="fa">&#xf06e;</i>3</div>
                  <div><i style="font-size:24px" class="fa">&#xf0e6;</i>2</div>
                  <p>${blogValue.data().name}</p>
@@ -47,17 +56,36 @@ function loadBlog(){
 
 
 
- function getBlog(id, name){
-     console.log(id + name)
-   firebase.firestore().collection('blogs').doc(id).get().then(function(docref){
-    document.getElementById('postContent').innerHTML+=`
+
+
+ function getBlog(id){
+    document.getElementById("image-text").style.display = "none";
+  let postRef = firebase.firestore().collection('blogs').doc(id);
+  postRef.get().then(function(docref){
+    document.getElementById('post').innerHTML+=`
     <span class="header-text"><strong>${docref.data().title}</strong></span>
-    `;
-       console.log(docref.data().title)
-       
+    <p>${docref.data().content}</p>
+    <form action="#" id="add-reply">
+    <div class="form-group">
+        <textarea name="" id="reply-contents" cols="60" rows="4" required></textarea>
+    </div>
+    <div class="form-group view-more">
+        <button style="width: 50%; height: 40px; color: white; font-size: 20px;
+          background-color: rgb(13, 148, 148);" type="submit">Comment</button>
+    </div>
+</form>
+    `;   
    })
-   
-   
- }
+   document.querySelector('#add-reply').addEventListener('submit', (e) => {
+    e.preventDefault();
+    alert("we are in");
+    let setWithMerge = postRef.update({
+		comments: firebase.firestore.FieldValue.arrayUnion({
+			contents: replyContents.value,
+			'replied-at': new Date(),
+		}),
+	});
+ })
+}
 
 
